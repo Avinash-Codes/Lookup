@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "339230993871",
+    "project_id": "lookup-43a07",
+    "storage_bucket": "lookup-43a07.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:339230993871:android:8fcde290d678d49c7836ba",
+        "android_client_info": {
+          "package_name": "com.avinash.lookup"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-lzgOwPyv9u0Rw3Ow56ZurQi4YH7IOFM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,36 @@
+package com.avinash.lookup.dataclass
+
+data class BusinessType(
+    val plumber: String,
+    val electrician: String,
+    val carpenter: String,
+    val painter: String,
+    val mechanic: String,
+    val gardener: String,
+    val driver: String,
+    val cook: String,
+    val maid: String,
+    val tutor: String,
+    val doctor: String,
+    val lawyer: String,
+    val accountant: String,
+    val architect: String,
+    val interiorDesigner: String,
+    val photographer: String,
+    val eventPlanner: String,
+    val hairStylist: String,
+    val makeupArtist: String,
+    val fashionDesigner: String,
+    val tailor: String,
+    val boutique: String,
+    val gymTrainer: String,
+    val yogaInstructor: String,
+    val danceInstructor: String,
+    val musician: String,
+    val singer: String,
+    val artist: String,
+    val writer: String,
+    val blogger: String,
+){
+    constructor(): this("", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "")
+}
