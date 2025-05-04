@@ -1,3 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
 <resources>
-    <string name="app_name">Lookup</string>
+    <!-- App Strings -->
+    <string name="app_name">Business Directory</string>
+
+    <!-- Business Search Screen -->
+    <string name="business_directory">Business Directory</string>
+    <string name="enter_pincode">Enter PIN Code</string>
+    <string name="search_directory">Search Directory</string>
+    <string name="select_business_category">Select Business Category</string>
+
+    <!-- Business Card -->
+    <string name="owner">Owner</string>
+    <string name="location">Location</string>
+    <string name="call">Call</string>
+
+    <!-- Business Registration -->
+    <string name="business_registration">Business Registration</string>
+    <string name="required_information">Required Information</string>
+    <string name="optional_information">Optional Information</string>
+    <string name="your_name">Your Name *</string>
+    <string name="business_name">Business Name *</string>
+    <string name="business_type">Business Type *</string>
+    <string name="custom_business_type">Custom Business Type *</string>
+    <string name="pin_code">PIN Code *</string>
+    <string name="phone_number">Phone Number *</string>
+    <string name="business_address">Business Address (Optional)</string>
+    <string name="email_address">Email Address (Optional)</string>
+    <string name="website">Website (Optional)</string>
+    <string name="business_description">Business Description (Optional)</string>
+    <string name="register_business">Register Business</string>
+
+    <!-- Business Types -->
+    <string name="plumber">Plumber</string>
+    <string name="electrician">Electrician</string>
+    <string name="carpenter">Carpenter</string>
+    <string name="painter">Painter</string>
+    <string name="mechanic">Mechanic</string>
+    <string name="gardener">Gardener</string>
+    <string name="driver">Driver</string>
+    <string name="cook">Cook</string>
+    <string name="maid">Maid</string>
+    <string name="tutor">Tutor</string>
+    <string name="doctor">Doctor</string>
+    <string name="lawyer">Lawyer</string>
+    <string name="accountant">Accountant</string>
+    <string name="architect">Architect</string>
+    <string name="interior_designer">Interior Designer</string>
+    <string name="photographer">Photographer</string>
+    <string name="event_planner">Event Planner</string>
+    <string name="hair_stylist">Hair Stylist</string>
+    <string name="makeup_artist">Makeup Artist</string>
+    <string name="fashion_designer">Fashion Designer</string>
+    <string name="tailor">Tailor</string>
+    <string name="boutique">Boutique</string>
+    <string name="gym_trainer">Gym Trainer</string>
+    <string name="yoga_instructor">Yoga Instructor</string>
+    <string name="dance_instructor">Dance Instructor</string>
+    <string name="musician">Musician</string>
+    <string name="singer">Singer</string>
+    <string name="artist">Artist</string>
+    <string name="writer">Writer</string>
+    <string name="blogger">Blogger</string>
+    <string name="other">Other</string>
+
+    <!-- Messages -->
+    <string name="error_user_exists">User already exists</string>
+    <string name="error_no_businesses">No businesses found</string>
+    <string name="success_profile_added">Profile added successfully</string>
+    <string name="error_unknown">An unknown error occurred</string>
 </resources>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <!-- App Strings -->
+    <string name="app_name">व्यापार निर्देशिका</string>
+
+    <!-- Business Search Screen -->
+    <string name="business_directory">व्यापार निर्देशिका</string>
+    <string name="enter_pincode">पिनकोड दर्ज करें</string>
+    <string name="search_directory">निर्देशिका खोजें</string>
+    <string name="select_business_category">व्यवसाय श्रेणी चुनें</string>
+
+    <!-- Business Card -->
+    <string name="owner">मालिक</string>
+    <string name="location">स्थान</string>
+    <string name="call">कॉल करें</string>
+
+    <!-- Business Registration -->
+    <string name="business_registration">व्यवसाय पंजीकरण</string>
+    <string name="required_information">आवश्यक जानकारी</string>
+    <string name="optional_information">वैकल्पिक जानकारी</string>
+    <string name="your_name">आपका नाम *</string>
+    <string name="business_name">व्यवसाय का नाम *</string>
+    <string name="business_type">व्यवसाय का प्रकार *</string>
+    <string name="custom_business_type">कस्टम व्यवसाय प्रकार *</string>
+    <string name="pin_code">पिन कोड *</string>
+    <string name="phone_number">फोन नंबर *</string>
+    <string name="business_address">व्यवसाय का पता (वैकल्पिक)</string>
+    <string name="email_address">ईमेल पता (वैकल्पिक)</string>
+    <string name="website">वेबसाइट (वैकल्पिक)</string>
+    <string name="business_description">व्यवसाय का विवरण (वैकल्पिक)</string>
+    <string name="register_business">व्यवसाय पंजीकृत करें</string>
+
+    <!-- Business Types -->
+    <string name="plumber">प्लंबर</string>
+    <string name="electrician">इलेक्ट्रीशियन</string>
+    <string name="carpenter">बढ़ई</string>
+    <string name="painter">पेंटर</string>
+    <string name="mechanic">मैकेनिक</string>
+    <string name="gardener">माली</string>
+    <string name="driver">ड्राइवर</string>
+    <string name="cook">रसोइया</string>
+    <string name="maid">घरेलू सहायक</string>
+    <string name="tutor">शिक्षक</string>
+    <string name="doctor">डॉक्टर</string>
+    <string name="lawyer">वकील</string>
+    <string name="accountant">लेखाकार</string>
+    <string name="architect">वास्तुकार</string>
+    <string name="interior_designer">इंटीरियर डिजाइनर</string>
+    <string name="photographer">फोटोग्राफर</string>
+    <string name="event_planner">इवेंट प्लानर</string>
+    <string name="hair_stylist">हेयर स्टाइलिस्ट</string>
+    <string name="makeup_artist">मेकअप आर्टिस्ट</string>
+    <string name="fashion_designer">फैशन डिजाइनर</string>
+    <string name="tailor">दर्जी</string>
+    <string name="boutique">बुटीक</string>
+    <string name="gym_trainer">जिम ट्रेनर</string>
+    <string name="yoga_instructor">योग प्रशिक्षक</string>
+    <string name="dance_instructor">नृत्य प्रशिक्षक</string>
+    <string name="musician">संगीतकार</string>
+    <string name="singer">गायक</string>
+    <string name="artist">कलाकार</string>
+    <string name="writer">लेखक</string>
+    <string name="blogger">ब्लॉगर</string>
+    <string name="other">अन्य</string>
+
+    <!-- Messages -->
+    <string name="error_user_exists">उपयोगकर्ता पहले से मौजूद है</string>
+    <string name="error_no_businesses">कोई व्यवसाय नहीं मिला</string>
+    <string name="success_profile_added">प्रोफ़ाइल सफलतापूर्वक जोड़ी गई</string>
+    <string name="error_unknown">कोई अज्ञात त्रुटि हुई</string>
+</resources>

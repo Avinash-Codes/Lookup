@@ -22,9 +22,13 @@ sealed class UserProfileEvent {
 
 class UserProfile: ViewModel() {
     private val pincodeCollectionReference = Firebase.firestore.collection("pincodes")
+    private val categoriesCollectionReference = Firebase.firestore.collection("businessCategories")
 
     private val _operationState = mutableStateOf<UserProfileEvent>(UserProfileEvent.Idle)
     val operationState: State<UserProfileEvent> = _operationState
+
+    private val _allBusinessTypes = MutableStateFlow<List<String>>(emptyList())
+    val allBusinessTypes: StateFlow<List<String>> = _allBusinessTypes
 
     private val _isLoading = mutableStateOf(false)
     val isLoading: State<Boolean> = _isLoading
@@ -35,17 +39,66 @@ class UserProfile: ViewModel() {
     private val _errorMessage = mutableStateOf("")
     val errorMessage: State<String> = _errorMessage
 
-    private val _businessTypes = MutableStateFlow<List<String>>(emptyList())
+    val _businessTypes = MutableStateFlow<List<String>>(emptyList())
     val businessTypes: StateFlow<List<String>> = _businessTypes
 
-    private val _businessList = MutableStateFlow<List<UserData>>(emptyList())
+    val _businessList = MutableStateFlow<List<UserData>>(emptyList())
     val businessList: StateFlow<List<UserData>> = _businessList
+
+
+    init {
+        fetchAllBusinessCategories()
+    }
+
+    private fun fetchAllBusinessCategories() {
+        viewModelScope.launch {
+            try {
+                val snapshot = categoriesCollectionReference.get().await()
+                val customCategories = snapshot.documents.mapNotNull { it.getString("category") }
+
+                // Combine predefined and custom categories
+                val predefinedCategories = listOf(
+                    "Plumber", "Electrician", "Carpenter", "Painter", "Mechanic",
+                    "Gardener", "Driver", "Cook", "Maid", "Tutor", "Doctor",
+                    "Lawyer", "Accountant", "Architect", "Interior Designer",
+                    "Photographer", "Event Planner", "Hair Stylist", "Makeup Artist",
+                    "Fashion Designer", "Tailor", "Boutique", "Gym Trainer",
+                    "Yoga Instructor", "Dance Instructor", "Musician", "Singer",
+                    "Artist", "Writer", "Blogger", "Other"
+                )
+
+                val allCategories = (predefinedCategories + customCategories).distinct().sorted()
+                _allBusinessTypes.value = allCategories
+            } catch (e: Exception) {
+                Log.e("UserProfile", "Error fetching categories: ${e.message}", e)
+            }
+        }
+    }
+
+    private suspend fun addNewBusinessCategory(category: String) {
+        try {
+
+            val categoryDoc = categoriesCollectionReference.document()
+            val categoryData = hashMapOf(
+                "category" to category,
+                "createdAt" to System.currentTimeMillis()
+            )
+            categoryDoc.set(categoryData).await()
+            fetchAllBusinessCategories() // Refresh the categories list
+        } catch (e: Exception) {
+            Log.e("UserProfile", "Error adding new category: ${e.message}", e)
+        }
+    }
 
     fun addUserPinCodeToFireStore(userProfile: UserData, businessCategory: String) {
         viewModelScope.launch {
             try {
                 _isLoading.value = true
                 _operationState.value = UserProfileEvent.Loading
+
+                if (businessCategory !in _allBusinessTypes.value) {
+                    addNewBusinessCategory(businessCategory)
+                }
 
                 // Check if user exists in any pincode and business category
                 val allPincodesSnapshot = pincodeCollectionReference.get().await()
