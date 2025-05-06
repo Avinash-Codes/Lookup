@@ -2,7 +2,7 @@
 
 <resources>
     <!-- App Strings -->
-    <string name="app_name">व्यापार निर्देशिका</string>
+    <string name="app_name">खोजो</string>
 
     <!-- Business Search Screen -->
     <string name="business_directory">व्यापार निर्देशिका</string>
