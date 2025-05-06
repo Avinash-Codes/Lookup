@@ -2,7 +2,7 @@
 
 <resources>
     <!-- App Strings -->
-    <string name="app_name">Business Directory</string>
+    <string name="app_name">Lookup</string>
 
     <!-- Business Search Screen -->
     <string name="business_directory">Business Directory</string>
